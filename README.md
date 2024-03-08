@@ -16,3 +16,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Design Document
+
+For detailed insights into the design considerations and decisions made for this project, please refer to the [Design Document] (https://github.com/pradeepsiva006/data-processor-server/blob/master/DESIGN-DOCUMENT.md).
+
+Thank you!
