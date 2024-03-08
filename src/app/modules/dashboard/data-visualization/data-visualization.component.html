@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="upload-container">
+
+        <p-fileUpload mode="basic" [auto]="true" chooseLabel="Browse" name="demo[]"
+            url="https://www.primefaces.org/cdn/api/upload.php" accept=".txt"
+            (onUpload)="onFileUpload($event)"></p-fileUpload>
+        <div class="top-bottom-margin" *ngIf="file?.name">
+            <span>{{ file.name }} - {{ file.size }} bytes</span>
+        </div>
+    </div>
+    <div class="top-bottom-margin">
+        <p-checkbox [disabled]="!showChart" name="checkbox" [(ngModel)]="isChecked" [binary]="true"
+            (onChange)="onCheckboxChange()"></p-checkbox>
+        <label for="checkbox"> Auto Refresh</label>
+
+    </div>
+    <div class="chart-container chart-custom" *ngIf="showChart">
+        <p-chart type="bar" [data]="chartData" [options]="chartOptions"></p-chart>
+    </div>
+    <div *ngIf="!showChart">
+        <span [ngClass]="{'error-text': showError}"> {{ message }}</span>
+    </div>
+</div>
